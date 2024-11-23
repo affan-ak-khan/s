@@ -88,17 +88,17 @@ export function Nav({
   return (
     <div className="flex items-center justify-center min-h-[4.5rem] border-b shadow-gray-600 sm:px-5 px-0 z-10">
       <div className="flex items-center lg:justify-between justify-center w-full sm:w-[52rem]">
-        <h1 className="lg:flex hidden w-[40%] text-2xl pl-1 text-slate-900">
-          Dynamic Pathfinding 
-        </h1>
-        <div className="flex sm:items-end items-center justify-start sm:justify-between sm:flex-row flex-col sm:space-y-0 space-y-3 sm:py-0 py-4 sm:space-x-4 ">
-          
-          <Select
-            label="Graph"
-            value={algorithm}
-            isDisabled={isDisabled}
-            options={PATHFINDING_ALGORITHMS}
-            onChange={(e) => {
+      <h1 className="lg:flex hidden w-[40%] text-2xl pl-1 text-white font-bold">
+        Dynamic Pathfinding 
+      </h1>
+      <div className="flex sm:items-end items-center justify-start sm:justify-between sm:flex-row flex-col sm:space-y-0 space-y-3 sm:py-0 py-4 sm:space-x-4 ">
+        
+        <Select
+        label="Graph"
+        value={algorithm}
+        isDisabled={isDisabled}
+        options={PATHFINDING_ALGORITHMS}
+        onChange={(e) => {
               setAlgorithm(e.target.value as AlgorithmType);
             }}
           />

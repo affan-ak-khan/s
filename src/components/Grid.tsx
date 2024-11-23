@@ -46,7 +46,7 @@ export function Grid({
     <div
       className={twMerge(
         // Base classes
-        "flex items-center flex-col justify-center border-sky-300 mt-10",
+        "flex items-center flex-col justify-center border-white mt-10",
         // Control Grid height
         `lg:min-h-[${MAX_ROWS * 17}px]  md:min-h-[${
           MAX_ROWS * 15
@@ -55,10 +55,10 @@ export function Grid({
         `lg:w-[${MAX_COLS * 17}px] md:w-[${MAX_COLS * 15}px] xs:w-[${
           MAX_COLS * 8
         }px] w-[${MAX_COLS * 7}px]`
-      )}
-    > <img src="public/bg.jpg" alt="image" className="absolute w-full" />
-    
-      {grid.map((r, rowIndex) => (
+            )}
+          > <img src="public/back.jpeg" alt="image" className="absolute w-full" />
+          
+            {grid.map((r, rowIndex) => (
         <div key={rowIndex} className="flex z-10">
           {r.map((tile, tileIndex) => {
             const { row, col, isEnd, isStart, isPath, isTraversed, isWall } =

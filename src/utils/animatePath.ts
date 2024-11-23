@@ -21,7 +21,7 @@ export const animatePath = (
       if (!isEqual(tile, startTile) && !isEqual(tile, endTile)) {
         document.getElementById(
           `${tile.row}-${tile.col}`
-        )!.className = `${TRAVERSED_TILE_STYLE} animate-traversed`;
+        )!.className = `${TRAVERSED_TILE_STYLE} animate-new-traversed`;
       }
     }, SLEEP_TIME * i * SPEEDS.find((s) => s.value === speed)!.value); // Calculate delay based on speed
   }
@@ -32,8 +32,8 @@ export const animatePath = (
         const tile = path[i];
         if (!isEqual(tile, startTile) && !isEqual(tile, endTile)) {
           document.getElementById(
-            `${tile.row}-${tile.col}`
-          )!.className = `${PATH_TILE_STYLE} animate-path`;
+        `${tile.row}-${tile.col}`
+          )!.className = `${PATH_TILE_STYLE} animate-new-path`;
         }
       }, EXTENDED_SLEEP_TIME * i * SPEEDS.find((s) => s.value === speed)!.value); // Calculate delay based on speed
     }
